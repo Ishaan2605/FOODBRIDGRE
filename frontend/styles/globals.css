@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* 🌈 Global CSS Theme: FoodBridge Design */
+:root {
+  --background: linear-gradient(to bottom right, #FFF8F0, #D1E8E4); /* Soft pastel bg */
+  --foreground: #222222;
+
+  --primary: #F76C6C;         /* Coral red - love, warmth */
+  --secondary: #A8D5BA;       /* Sage green - trust, health */
+  --highlight: #FFE066;       /* Yellow - positivity */
+  --accent: #C4A1FF;          /* Lavender - empathy */
+  --card-bg: rgba(255, 255, 255, 0.85); /* Glassmorphic white */
+
+  --font-sans: 'Poppins', sans-serif;
+  --font-heading: 'Nunito', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: linear-gradient(to bottom right, #0f0f0f, #1f1f1f);
+    --foreground: #eeeeee;
+    --card-bg: rgba(30, 30, 30, 0.9);
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🧊 Utility enhancements */
+* {
+  box-sizing: border-box;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  color: var(--foreground);
+  background-color: white;
+  border-radius: 0.75rem;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+  color: #888;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* ✨ Button hover and transition */
+button:hover {
+  transform: scale(1.03);
+  transition: 0.2s ease-in-out;
+}
